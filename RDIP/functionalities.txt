@@ -1,0 +1,10 @@
+Functionalities for this Experiment:
+
+->the page should be replicated in html and css and their functionalities in js
+->on clicking the experiment button a dropdown should be displayed showing hindi and english
+->on choosing any of language a sentance broken into buttons should appear using which we should make sentences
+->on clicking the buttons they should disappear and form the sentence in order of clicking them
+->after forming the sentence two buttons "reform sentence" and "check the corectness of the sentence" shold appear
+->on clicking the reform sentence button the sentence should disappear and the previous buttons should appear
+->on clicking the correctness button the formed sentence should be compared with answer and display Right Answer!!! or Wrong Answer!!!
+->if it is wrong the "get correct sentence" button should appear  on clicking it all the correct answers of that jumbled words should appear
