@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+
+        <title>Virtual Labs</title>
+
+        <link rel="shortcut icon" href="../../src/themes/maroon-grid/images/logo.jpg">
+
+        <link rel="stylesheet" href="style.css">
+
+        <script src="script.js"></script>
+    </head>
+    <body>
+
+
+            <div class="display-sections">
+
+                <div class="section-experiment">
+                    <div class="head1">
+                        Experiment
+                    </div>
+                    <div class="data" style="text-align: center;">
+                        <select id="language" onchange="exp_top(this.value)">
+                            <option value="null">---Select Language---</option>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                        </select>
+                    </div>
+                    <br><br>
+                    <div class="experiment">
+                        <p id="line1"></p>
+                        <p><i id="line2"></i></p>
+                    </div>
+                </div>
+
+            </div>
+
+    </body>
+</html>

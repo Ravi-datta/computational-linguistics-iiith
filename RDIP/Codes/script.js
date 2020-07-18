@@ -1,5 +1,4 @@
-/* Corpse of Sentences: */
-/*pragathi */
+/* Corpus of Sentences: */
 
 var sentence = '{"English":[' +
     '{"a":"John ate an apple before afternoon", "b":"before afternoon John ate an apple", "c":"John before afternoon ate an apple"},' +
@@ -30,3 +29,17 @@ var sentence = '{"English":[' +
     '{"a":"एक लाल किताब वहाँ है", "b":"एक लाल किताब है वहाँ", "c":"वहाँ है एक लाल किताब", "d":"है वहाँ एक लाल किताब"},' +
     '{"a":"एक बड़ी सी किताब वहाँ है", "b":"एक बड़ी सी किताब है वहाँ", "c":"बड़ी सी एक किताब वहाँ है", "d":"बड़ी सी एक किताब है वहाँ", "e":"वहाँ है एक बड़ी सी किताब",' +
     '"f":"वहाँ है बड़ी सी एक किताब", "g":"है वहाँ एक बड़ी सी किताब", "h":"है वहाँ बड़ी सी एक किताब"}]}';
+
+    function exp_top(language){
+    if(language == "null"){
+        alert('Select a Language');
+        document.getElementById("line1").style.display = "none";
+        document.getElementById("line2").style.display = "none";
+        return false;
+    }
+    else if(language == "english" || language == "hindi"){
+        document.getElementById("line1").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words";
+        document.getElementById("line2").innerHTML = "(select the buttons in proper order)";
+        return true;
+    }
+}
