@@ -1,4 +1,5 @@
 /* Corpse of Sentences: */
+/*pragathi */
 
 var sentence = '{"English":[' +
     '{"a":"John ate an apple before afternoon", "b":"before afternoon John ate an apple", "c":"John before afternoon ate an apple"},' +
