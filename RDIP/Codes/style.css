@@ -73,13 +73,13 @@ select{
 }
 
 
-#line1{
+#line1,#second-msg{
     color: darkblue;
     font-size: 16px;
     font-weight: 800;
 }
 
-#line2{
+#line2,#second-msg2{
     color: rgb(0,0,255);
     font-size: 14px;
 }
@@ -88,4 +88,8 @@ select{
     cursor: pointer;
     margin:10px;
     padding:5px;
+}
+#formed-sentence{
+    font-size: 30px;
+    color: #444444;
 }
