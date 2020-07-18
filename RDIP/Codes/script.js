@@ -30,16 +30,62 @@ var sentence = '{"English":[' +
     '{"a":"एक बड़ी सी किताब वहाँ है", "b":"एक बड़ी सी किताब है वहाँ", "c":"बड़ी सी एक किताब वहाँ है", "d":"बड़ी सी एक किताब है वहाँ", "e":"वहाँ है एक बड़ी सी किताब",' +
     '"f":"वहाँ है बड़ी सी एक किताब", "g":"है वहाँ एक बड़ी सी किताब", "h":"है वहाँ बड़ी सी एक किताब"}]}';
 
-    function exp_top(language){
-    if(language == "null"){
-        alert('Select a Language');
-        document.getElementById("line1").style.display = "none";
-        document.getElementById("line2").style.display = "none";
-        return false;
+    var language="";
+    var current_sentence = "";
+    var sentences = JSON.parse(sentence);
+
+    function initialize(){
+        language = "";
+        current_sentence = "";
     }
-    else if(language == "english" || language == "hindi"){
-        document.getElementById("line1").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words";
-        document.getElementById("line2").innerHTML = "(select the buttons in proper order)";
-        return true;
+
+    function exp_top(){
+        language = document.getElementById('language').options[document.getElementById('language').selectedIndex].text;
+        if(language == "---Select Language---"){
+            alert('Select a Language');
+            document.getElementById("line1").style.display = "none";
+            document.getElementById("line2").style.display = "none";
+            document.getElementById("experiment-sentence").style.display = "none";
+            return false;
+        }
+        else if(language == "English" || language == "Hindi"){
+            document.getElementById("line1").style.display = "initial";
+            document.getElementById("line2").style.display = "initial";
+            document.getElementById("experiment-sentence").style.display = "initial";
+            document.getElementById("line1").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words";
+            document.getElementById("line2").innerHTML = "(select the buttons in proper order)";
+            sentence_selection(language);
     }
 }
+
+function sentence_selection(language){
+    document.getElementById('experiment-sentence').innerHTML = "";
+    if(language == "English"){
+        var question = Math.floor(Math.random() * 10);
+        current_sentence = sentence_to_buttons( sentences.English[question].a );
+    }
+    else if(language == "Hindi"){
+        var question = Math.floor(Math.random() * 7);
+        current_sentence = sentence_to_buttons( sentences.Hindi[question].a );
+    }
+}
+
+function sentence_to_buttons( str ){
+    var arra = str.split(" ");
+    arra = shuffle(arra);
+    for(i=0;i<arra.length;i++){
+        var button = document.createElement("button");
+        button.innerHTML = arra[i];
+        document.getElementById('experiment-sentence').appendChild(button);
+    }
+}
+function shuffle(a) {
+    var j, c, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        c = a[i];
+        a[i] = a[j];
+        a[j] = c;
+    }
+    return a;
+} 
