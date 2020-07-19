@@ -30,7 +30,8 @@ var sentence = '{"English":[' +
 
     var language="";
     var current_sentence = "";
-    var formed_sentence = ""
+    var formed_sentence = "";
+    var word_array;
     var sentences = JSON.parse(sentence);
 
     function initialize(){
@@ -78,7 +79,11 @@ function sentence_selection(language){
 
 function sentence_to_buttons( str ){
     var arra = str.split(" ");
-    arra = shuffle(arra);
+    word_array = shuffle(arra);
+    adding_buttons(word_array);
+}
+
+function adding_buttons(arra){
     var k="1";
     for(i=0;i<arra.length;i++){
         var button = document.createElement("button");
@@ -90,6 +95,13 @@ function sentence_to_buttons( str ){
     }
     document.getElementById('formed-sentence').value = "";
 }
+
+function reform2(){
+    clean();
+    document.getElementById('experiment-sentence').innerHTML = "";
+    adding_buttons(word_array);
+}
+
 function shuffle(a) {
     var j, c, i;
     for (i = a.length - 1; i > 0; i--) {
