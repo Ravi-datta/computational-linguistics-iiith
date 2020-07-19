@@ -84,7 +84,7 @@ select{
     font-size: 14px;
 }
 
-#experiment-sentence button{
+#experiment-sentence button, #reform-button, #check-correctness{
     cursor: pointer;
     margin:10px;
     padding:5px;
