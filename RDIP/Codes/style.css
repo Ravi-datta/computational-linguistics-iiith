@@ -12,7 +12,7 @@ body{
 .display-sections{
     width: 100%;
     min-height: 750px;
-   /* position: absolute; */
+    position: absolute;
     top: 0;
     left: 0;
     padding-top: 30px;
@@ -32,21 +32,27 @@ body{
 }
 
 .head1{
-    color: rgb(34,34,34);
+    color: #222222;
     font-weight: 800;
     font-size: 24px;
     padding-bottom: 10px;
 }
 
-
+.head2{
+    color:#222222;
+    text-decoration: underline;
+    font-weight: 600;
+    padding-top:10px;
+    font-size: 18px;
+}
 
 .data{
     font-size: 16px;
-    color: rgb(68,68,68);
+    color: #444444;
     padding:10px;
 }
 
-.experiment{
+.area{
     text-align: center;
 }
 
@@ -62,34 +68,48 @@ hr{
 select{
     border-width: 0.5px;
     border-style: solid;
-    border-color: color(#767676,#C3C3C3);
+    border-color: -internal-light-dark-color(rgb(118, 118, 118), rgb(195, 195, 195));
     text-align: left;
     zoom:120%;
-    color:rgb(68,68,68);
+    color:#444444;
 }
 
-#experiment{
+#area{
     margin-top:100px;
 }
 
-
-#line1,#second-msg{
-    color: darkblue;
+#line1, #msg1{
+    color: #0000AA;
     font-size: 16px;
     font-weight: 800;
 }
 
-#line2,#second-msg2{
-    color: rgb(0,0,255);
+#line2, #msg2{
+    color: #0000FF;
     font-size: 14px;
 }
 
-#experiment-sentence button, #reform-button, #check-correctness{
-    cursor: pointer;
-    margin:10px;
+#experiment-sentence button{
     padding:5px;
 }
+
+#experiment-sentence button, #reform-button,
+#check-correctness{
+    cursor: pointer;
+    margin:10px;
+}
+
 #formed-sentence{
     font-size: 30px;
     color: #444444;
+}
+
+#right{
+    font-size: 30px;
+    color: #008000;
+}
+
+#wrong{
+    font-size: 30px;
+    color: #FF0000;
 }

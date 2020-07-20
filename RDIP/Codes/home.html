@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head lang="en">
+        <meta charset="utf-8">
+
         <title>Virtual Labs</title>
+
+        <link rel="shortcut icon" href="../../src/themes/maroon-grid/images/logo.jpg">
+
         <link rel="stylesheet" href="style.css">
+
         <script src="script.js"></script>
     </head>
     <body>
-
+        
 
             <div class="display-sections">
 
@@ -15,21 +21,23 @@
                         Experiment
                     </div>
                     <div class="data" style="text-align: center;">
-                        <select id="language" onchange="exp_top()">
+                        <select id="language" onchange="basha()">
                             <option value="null">---Select Language---</option>
                             <option value="english">English</option>
                             <option value="hindi">Hindi</option>
                         </select>
                     </div>
                     <br><br>
-                    <div class="experiment">
+                    <div class="area">
                         <p id="line1"></p>
                         <p><i id="line2"></i></p>
-                        <p id="experiment-sentence" onclick="reform();assi(event.target.id)"></p><br><br>
-                        <p id="second-msg"></p><i id="second-msg2"></i>
+                        <p id="experiment-sentence" onclick="sentence_formed(event.target.id);assi(event.target.id)"></p><br><br>
+                        <p id="msg1"></p><i id="msg2"></i>
                         <p id="formed-sentence"></p>
-                        <button id="reform-button" onclick="reform2()" style="display: none;">Re-form the sentence</button><br>
-                        <button id="check-correctness" style="display: none;">Check the correctness of this sentence</button>
+                        <button id="reform-button" style="display: none;" onclick="reform()">Re-form the sentence</button><br>
+                        <button id="check-correctness" style="display: none;" onclick="correctness()">Check the correctness of this sentence</button><br>
+                        <p id="right" style="display: none;">Right answer!!!</p>
+                        <p id="wrong" style="display: none;">Wrong answer!!!</p>
                     </div>
                 </div>
 
