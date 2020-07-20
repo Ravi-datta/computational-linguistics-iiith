@@ -146,6 +146,7 @@ function correctness(){
         }
         else{
             document.getElementById('wrong').style.display = "initial";
+            document.getElementById('get-right').style.display = "initial";
         }
         return;
     }
@@ -162,6 +163,7 @@ function correctness(){
         }
         else{
             document.getElementById('wrong').style.display = "initial";
+            document.getElementById('get-right').style.display = "initial";
         }
         return true;
     }
@@ -177,6 +179,7 @@ function clean(){
     document.getElementById("check-correctness").style.display = "none";
     document.getElementById('right').style.display = "none";
     document.getElementById('wrong').style.display = "none";
+    document.getElementById('get-right').style.display = "none";
 }
 
 function display_set(val){
