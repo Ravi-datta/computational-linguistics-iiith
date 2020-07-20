@@ -131,6 +131,39 @@ function reform(){
     add(word_array);
 }
 
+function correct_sentence(){
+    document.getElementById('correct-sentences').style.display = "initial";
+
+    var name = document.getElementById('get-right').innerHTML;
+
+    if(name == "Get correct sentence" || name == "Get answers"){
+        document.getElementById('get-right').innerHTML = "Hide the correct sentence";
+
+        if(language == "English"){
+            for(sent in sentences.English[question]){
+                var t = document.createTextNode(sentences.English[question][sent]);
+                document.getElementById('correct-sentences').appendChild(t);
+                var line = document.createElement("br");
+                document.getElementById('correct-sentences').appendChild(line);
+            }
+            return;
+        }
+        else if(language == "Hindi"){
+            for(sent in sentences.Hindi[question]){
+                var t = document.createTextNode(sentences.Hindi[question][sent]);
+                document.getElementById('correct-sentences').appendChild(t);
+                var line = document.createElement("br");
+                document.getElementById('correct-sentences').appendChild(line);
+            }
+            return;
+        }
+    }
+    else if(name == "Hide the correct sentence"){
+        document.getElementById('get-right').innerHTML = "Get answers";
+        document.getElementById('correct-sentences').innerHTML = "";
+    }
+}
+
 function correctness(){
     var status = false;
     if(language == "English"){
@@ -180,6 +213,9 @@ function clean(){
     document.getElementById('right').style.display = "none";
     document.getElementById('wrong').style.display = "none";
     document.getElementById('get-right').style.display = "none";
+    document.getElementById('correct-sentences').style.display = "none";
+    document.getElementById('get-right').innerHTML = "Get correct sentence";
+    document.getElementById('correct-sentences').innerHTML = "";
 }
 
 function display_set(val){
