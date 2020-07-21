@@ -1,49 +1,96 @@
-body{
-    font-family: "Lucida Grande","Lucida Sans Unicode", "Lucida Sans", Verdana,Arial,sans-serif;;
+
+
+.start
+{
+    float:center;
+    height:16%;
+    width:70%;
+    
 }
 
-.container{
-    margin:auto;
-    padding: 0px;
-    width: 1024px;
-    text-align: center;
+body
+{
+    background-color: #001a33;
+    font-family: "Lucida Grande","Lucida Sans Unicode", "Lucida Sans", Verdana,Arial,sans-serif;; 
+    line-height:1.22;
+    
 }
 
-.display-sections{
-    width: 100%;
-    min-height: 750px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-top: 30px;
-    padding-bottom: 2px;
-    font-size: 16px;
-    line-height: 24px;
-    margin: 0 auto;
-    background: url(../../src/themes/blue-icon/images/content_bg.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+.head1
+{
+    float: center;
+    padding:15px;
+    background-color: rgb(0, 138, 230);
+    height: 20px;
+    width:68%;
     text-align: left;
 }
 
-.section-experiment{
-    margin-left: 45px;
-    margin-right: 45px;
+a
+{
+text-align: left;
+text-decoration: none;
+color:white;
+font-style:bold;
+font-size:20px;
 }
 
-.head1{
-    color: #222222;
-    font-weight: 800;
-    font-size: 24px;
-    padding-bottom: 10px;
+#main
+{
+    
+    background-color: #e6f2ff;
+    color: #444 ;
+    color:#334d4d;
+    width:70%;
+    text-align: left;
 }
 
-.head2{
-    color:#222222;
-    text-decoration: underline;
-    font-weight: 600;
-    padding-top:10px;
-    font-size: 18px;
+ul
+{
+    
+    margin: left;
+    list-style-type: none;
+    height:5%;
+    
+    font-color:#2d5986;
+}
+li
+{
+        display: inline-block;
+        color:#2d5986;
+}
+h1
+{
+    margin-bottom: -20px;
+    font-size:40px;
+    font-family: Cambria;
+    padding-left: 20px; 
+    color:#444;
+    height:5%;
+    width:100%;
+}
+
+li.a:hover, li.a:active {
+ outline: none;
+  }
+
+li.a, li.a:active, li.a:visited
+ { color:#607890;
+  }
+
+li.a:hover {
+ color:#036;
+  }
+
+ 
+
+  li.a, li.a:visited { color: #444 !important; 
+          text-decoration: underline; }
+div.display-sections,div.data,div.area,select{
+   background-color: white;
+   margin: 20px; 
+    float: center;
+    width: 90%;
 }
 
 .data{
@@ -68,15 +115,14 @@ hr{
 select{
     border-width: 0.5px;
     border-style: solid;
+    width: 25%;
     border-color: -internal-light-dark-color(rgb(118, 118, 118), rgb(195, 195, 195));
     text-align: left;
     zoom:120%;
     color:#444444;
 }
 
-#area{
-    margin-top:100px;
-}
+
 
 #line1, #msg1{
     color: #0000AA;
